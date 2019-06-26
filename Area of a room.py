@@ -1,11 +1,17 @@
-# Exercises for Programmers:
-# Challenge 7 Area of a room
+# --------------------------------------------------------
+# Author: James Griffiths
+# Date Created: Monday, 26th June 2019
+# Version: 1.0
+# Description:
+#
+# Exercises for Programmers: Challenge 7 Area of a room
 #
 # Prompt the user of width and length of a room in feet and inches
 # Output the area in square feet
 # Output the area in square meters
-#
+# --------------------------------------------------------
 
+# Set a map for what a user might enter for meters or feet, return the unit in a standard form else reprompt for a unit
 def unitIs(unit):
     feet = {'feet', 'f', ''}
     meters = {'meters', 'meter', 'm'}
@@ -24,6 +30,7 @@ def unitIs(unit):
         return unitChoice
 
 
+# Universal check to see if an input is numeric
 def isANumber(unit):
     try:
         units = float(unit)
@@ -41,7 +48,6 @@ if unitChoice == "feet":
     length = isANumber(input("What is the length of the room in feet? "))
     width = isANumber(input("What is the width of the room in feet? "))
     area = length * width
-
     print("The area is: " + str(area) + " square feet.")
 
     # Display the area in meters for fun
@@ -53,7 +59,6 @@ elif unitChoice == "meters":
     length = isANumber(input("What is the length of the room in meters? "))
     width = isANumber(input("What is the width of the room in meters? "))
     area = length * width
-
     print("The area is: " + str(area) + " square meters.")
 
     # Display the area in feet for fun
