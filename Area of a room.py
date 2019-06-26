@@ -11,10 +11,10 @@
 # Output the area in square meters
 # --------------------------------------------------------
 
-# Set a map for what a user might enter for meters or feet, return the unit in a standard form else reprompt for a unit
+# Set a list for what a user might enter for meters or feet, return the unit in a standard form else reprompt for a unit
 def unitIs(unit):
-    feet = {'feet', 'f', ''}
-    meters = {'meters', 'meter', 'm'}
+    feet = ['feet', 'f', '']
+    meters = ['meters', 'meter', 'm']
 
     if unit in feet:
         unitChoice = "feet"
