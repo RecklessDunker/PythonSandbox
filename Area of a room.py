@@ -11,6 +11,7 @@
 # Output the area in square meters
 # --------------------------------------------------------
 
+
 # Set a list for what a user might enter for meters or feet, return the unit in a standard form else reprompt for a unit
 def unitIs(unit):
     feet = ['feet', 'f', '']
@@ -30,14 +31,21 @@ def unitIs(unit):
         return unitChoice
 
 
-# Universal check to see if an input is numeric
+# Universal check to see if an input is numeric, use float as values may not be natural
 def isANumber(unit):
     try:
         units = float(unit)
-        return units
+        if units > 0:
+            return units
+        else:
+            units = isANumber(input("Please enter a positive number: "))
+            return units
     except ValueError:
         units = isANumber(input("Please enter a number: "))
         return units
+
+
+# --------------------------------------------------------
 
 
 # Prompt user for what units they would like to use
@@ -64,4 +72,3 @@ elif unitChoice == "meters":
     # Display the area in feet for fun
     areaInF = round((length * width) / 0.09290304, 2)
     print("You didn't want this, but the area is: " + str(areaInF) + " square feet.")
-
