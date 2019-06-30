@@ -11,7 +11,8 @@
 # K = M, O = Q, E = G
 # But looking at the pattern, the code suggests moving the letters by two places
 # Solving the string offered hints at using string.maketrans() I did not know of this function so
-# used a more brute force solution below...
+# used a more brute force solution below... I'll look at making a version 2.0 very soon!
+
 
 def unscramble(originalText):
 
@@ -33,6 +34,17 @@ def unscramble(originalText):
     return ''.join(ntext)
 
 
-
 nText = unscramble(input("what is the text you want unscrambling? "))
 print(nText)
+
+
+# --------------------------------------------------------
+# Author: James Griffiths
+# Date Created: Wednesday, ---- June 2019
+# Version: 2.0
+# --------------------------------------------------------
+#
+# Same challenge as above, but I'll use the newly discovered string.maketrans() method
+
+
+
