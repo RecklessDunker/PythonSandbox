@@ -32,3 +32,21 @@ for char in indchars:
 # now get the characters that have a count value of 1 and join them together to make a word
 print("".join(ch for ch in indchars if d[ch] == 1))
 
+
+# --------------------------------------------------------
+# Author: James Griffiths
+# Date Created: Saturday, 1st July 2019
+# Version: 2.0
+# --------------------------------------------------------
+
+# Now I know the answer, is there a better way?
+# as the answer contains only alpha chars, I could use .isalpha?
+# I'll pop back later and work out the Big-O, but the below might be O(n) instead of O(n'2) above?
+
+file = open("/Users/jim/Google Drive/Dev Team/Jim/GitHub/Challenge2.txt", "r")
+lines = file.readlines()
+indchars = '\t'.join([line.strip() for line in lines])
+
+for x in indchars:
+    if x.isalpha():
+        print(x)
