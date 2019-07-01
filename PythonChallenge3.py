@@ -4,7 +4,7 @@
 # Version: 1.0
 # --------------------------------------------------------
 
-# Challenge Four ----------------------------------------
+# Challenge Four -----------------------------------------
 
 # Description: http://www.pythonchallenge.com/pc/def/equality.html
 
